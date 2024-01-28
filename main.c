@@ -132,13 +132,51 @@ main()
 */
 
 
+/*
 #include <stdio.h>
 
-// copy input to output, 2nd version //
+// copy input to output, 2nd version 
 main()
 {
     int c;
 
     while ((c = getchar()) != EOF)
     putchar(c);
+}
+*/
+
+
+/*
+#include <stdio.h>
+
+// exercise 1-6
+
+main()
+{
+    int c;
+
+    while ((c = getchar()) != EOF)
+    putchar(c) = 0;
+}
+*/
+
+/*
+#include <stdio.h>
+
+// exercise 1-7
+
+main()
+{
+    printf("%d\n, EOF");
+}
+*/
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    printf("%d", EOF);
+    return 0;
 }
