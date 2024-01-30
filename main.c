@@ -111,6 +111,7 @@ int main()
 */
 
 
+/*
 #include <stdio.h>
 
 int main()
@@ -124,7 +125,43 @@ int main()
     printf("Pass\n");
     printf("Congrats!\n");
 }
+    else
+{
+    printf("Fail\n");
+    printf("Good luck next time!\n");
 }
+    printf("If done\n");
+}
+*/
+
+
+/*
+#include <stdio.h>
+
+int main()
+{
+    int grade = 0;
+    printf("Grade: ");
+    scanf("%d", &grade);
+
+    if (grade >= 90) printf("A\n");
+       else if  (grade >= 80) printf("B\n");
+       else if  (grade >= 70) printf("C\n");
+       else if  (grade >= 60) printf("D\n");
+       else printf("Fail\n");
+}
+*/
 
 
 
+
+#include <stdio.h>
+
+int main()
+{
+    int height = 0:
+    printf("height: ");
+    scanf("%d", &height);
+
+    
+}
