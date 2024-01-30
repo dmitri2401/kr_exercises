@@ -97,6 +97,7 @@ int main()
 }
 */
 
+/*
 #include <stdio.h>
 
 int main()
@@ -107,3 +108,23 @@ int main()
 
     printf("mod: %d\n", mod);
 }
+*/
+
+
+#include <stdio.h>
+
+int main()
+{
+    int grade = 0;
+    printf("Grade: ");
+    scanf("%d", &grade);
+
+    if (grade >= 50)
+{
+    printf("Pass\n");
+    printf("Congrats!\n");
+}
+}
+
+
+
