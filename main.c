@@ -154,14 +154,55 @@ int main()
 
 
 
+/*
+#include <stdio.h>
+
+int main()
+{
+    int height = 0;
+    printf("height: ");
+    scanf("%d", &height);
+
+    int weight = 0;
+    printf("weight: ");
+    scanf("%d", &weight);
+
+    if (height > 150 || weight > 50)
+        printf("Good to ride!\n");
+    else 
+        printf("Not good to ride!\n");
+}
+*/
+
+
+/*
+#include <stdio.h>
+
+int main()
+{
+    int height = 0;
+    printf("height: ");
+    scanf("%d", &height);
+
+    if (! (height > 150) )
+        printf("Not tall enought!\n");
+    else 
+        printf("Tall enought!\n");
+}
+*/
+
+
+
 
 #include <stdio.h>
 
 int main()
 {
-    int height = 0:
-    printf("height: ");
-    scanf("%d", &height);
+    int i = 7;
 
-    
+    while (i < 5)
+    {
+        printf("i: %d\n", i);
+        i = i + 1;
+    }
 }
