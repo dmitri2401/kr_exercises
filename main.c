@@ -207,9 +207,11 @@ int main()
     }
 }
 
-
-
 */
+
+
+
+/*
 #include <stdio.h>
 
 int main()
@@ -232,3 +234,77 @@ int main()
         printf("total: %d\n", total);
         printf("average: %d\n", total / total_numbers);
 }
+*/
+
+
+/*
+#include <stdio.h>
+
+int main()
+{
+    int number = 0;
+    int max = -1;
+
+    while (number != -1)
+    {
+    printf("Enter the number: ");
+    scanf("%d", &number);
+    if (number > max) max = number;
+    printf("max: %d\n", max);
+    }
+    printf("max: %d\n", max);
+}
+*/
+
+
+/*
+#include <stdio.h>
+
+int main()
+{
+    int i = 25;
+
+    while (i < 20)
+    {
+        printf("i: %d\n", i);
+        i--;
+    }
+}
+*/
+
+
+/*
+#include <stdio.h>
+
+int main()
+{
+    int i = 25;
+
+    do
+    {
+        printf("i; %d\n", i);
+        i++;
+    }
+    while (i < 5);
+}
+*/
+
+
+/*
+#include <stdio.h>
+
+int main()
+{
+    int number = 0;
+
+    do
+    {
+        printf("Enter number (>0): ");
+        scanf("%d", &number);
+        if (number <= 0)
+        printf("Number must be >0!\n");
+    }
+    while (number <= 0);
+    
+}
+*/
