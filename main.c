@@ -323,6 +323,7 @@ int main()
 */
 
 
+/*
 #include <stdio.h>
 
 int main()
@@ -365,4 +366,29 @@ int main()
         conv * 3.28084);
     }
     printf("\n");
+}
+*/
+
+
+
+#include <stdio.h>
+
+int main()
+{
+
+    int number = 0;
+
+    switch (number)
+    {
+        case 0:
+        printf("Case 0!\n");
+
+        case 1:
+        printf("Case 1!\n");
+        break;
+        
+        case 2:
+        printf("Case 2!\n");
+    }
+    printf("Switch over!\n");
 }
