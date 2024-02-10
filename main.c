@@ -354,10 +354,15 @@ int main()
         while (stop < 0);
 
         printf("\n");
+        printf("Meters    Feet\n");
+        printf("*********************\n");
         for (double conv = initial;
              conv <= stop;
              conv += step)
     {
-        printf("%f %f\n", conv, conv * 3.28084);
+        printf("%-10.2f %-10.2f\n",
+        conv,
+        conv * 3.28084);
     }
+    printf("\n");
 }
