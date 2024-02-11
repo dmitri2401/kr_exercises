@@ -370,7 +370,7 @@ int main()
 */
 
 
-
+/*
 #include <stdio.h>
 
 int main()
@@ -391,4 +391,27 @@ int main()
         printf("Case 2!\n");
     }
     printf("Switch over!\n");
+}
+*/
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    int grade[] = {92, 85, 72, 73, 95};
+
+    grade[5] = 100;
+
+    // grade[2] = grade[2] + 5;
+
+    for (int i = 0; i < 5; i++)
+    printf("grade[%d] = %d\n", i, grade[i]);
+
+    int total  = 0;
+    for (int i = 0; i < 5; i++)
+    total += grade[i];
+    printf("average: %d\n", total / 5);
+
 }
