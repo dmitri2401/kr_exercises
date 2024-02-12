@@ -417,15 +417,83 @@ int main()
 */
 
 
-
+/*
 #include <stdio.h>
 
 int main()
 {
     char mydata[5];
-    maydata[0] = 'a';
-    maydata[1] = 'b';
-    maydata[2] = 'c';
-    maydata[3] = 'd';
-    maydata[4] = '\0';
+    mydata[0] = 'a';
+    mydata[1] = 'b';
+    mydata[2] = 'c';
+    mydata[3] = 'd';
+    mydata[4] = '\0';
+
+    printf("mydata[2] = %c\n", mydata[2]);
+
+    printf("\n%s\n", mydata);
+}
+*/
+
+
+
+/*
+#include <stdio.h>
+
+int main()
+{
+    char s1[] = "This is my string.";
+
+    for (int i = 0; i < 19; i++)
+    {
+        if (s1[i] == '\0')
+        printf("s1[%d] = \\0 \n", i);
+        else
+        printf("s1[%d] = %c\n", i, s1[i]);
+    }
+    
+    printf("\n%s\n", s1);
+}
+*/
+
+
+
+/*
+#include <stdio.h>
+
+int main()
+{
+    char s1[20];
+
+    printf("Enter: ");
+    scanf("%s", s1);
+
+    for (int i = 0; i < 20; i++)
+    printf("s1[%d] = %c\n", i, s1[i]);
+
+    printf("s1: %s\n", s1);
+}
+*/
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    char s1[20];
+
+    printf("Enter: ");
+    scanf("%s", s1);
+
+    int i = 0;
+    while (s1[i] != '\0')
+    {
+        if (s1[i] == '0')
+        printf("found 0\n");
+        i++;
+    }
+
+    printf("s1: %s\n", s1);
 }
