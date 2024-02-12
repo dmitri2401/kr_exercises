@@ -395,7 +395,7 @@ int main()
 */
 
 
-
+/*
 #include <stdio.h>
 
 int main()
@@ -413,4 +413,19 @@ int main()
     total += grade[i];
     printf("average: %d\n", total / 5);
 
+}
+*/
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    char mydata[5];
+    maydata[0] = 'a';
+    maydata[1] = 'b';
+    maydata[2] = 'c';
+    maydata[3] = 'd';
+    maydata[4] = '\0';
 }
