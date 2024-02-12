@@ -402,7 +402,6 @@ int main()
 {
     int grade[] = {92, 85, 72, 73, 95};
 
-    grade[5] = 100;
 
     // grade[2] = grade[2] + 5;
 
