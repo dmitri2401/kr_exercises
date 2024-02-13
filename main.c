@@ -477,7 +477,7 @@ int main()
 
 
 
-
+/*
 #include <stdio.h>
 
 int main()
@@ -496,4 +496,24 @@ int main()
     }
 
     printf("s1: %s\n", s1);
+}
+*/
+
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char s1[] = "This is the way.";
+
+    int length = strlen(s1);
+    int num_is = 0;
+
+    for (int i = 0; i < length; i++)
+    if (s1[i] == 'i') num_is++;
+
+    printf("length: %d\n", length);
+    printf("Number of is: %d\n", num_is);
+
 }
