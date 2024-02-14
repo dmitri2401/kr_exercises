@@ -500,6 +500,7 @@ int main()
 */
 
 
+/*
 #include <stdio.h>
 #include <string.h>
 
@@ -516,4 +517,37 @@ int main()
     printf("length: %d\n", length);
     printf("Number of is: %d\n", num_is);
 
+}
+*/
+
+
+/*
+#include <stdio.h>
+#include <string.h>
+
+int main()
+    {
+        char s1[50] = "The first sentence. ";
+        char s2[] = "The secont sentence.";
+
+        strcat(s1, s2);
+
+        printf("s1: %s\n", s1);
+    }
+*/
+
+
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char s1[] = "This is a string.";
+    char s2[] = "This is A string.";
+
+    if (strcmp(s1,s2) == 0)
+        printf("s1 and s2 are equal\n");
+    else
+        printf("s1 and s2 aren't equal\n");
 }
