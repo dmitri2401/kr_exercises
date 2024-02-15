@@ -537,7 +537,7 @@ int main()
 */
 
 
-
+/*
 #include <stdio.h>
 #include <string.h>
 
@@ -550,4 +550,57 @@ int main()
         printf("s1 and s2 are equal\n");
     else
         printf("s1 and s2 aren't equal\n");
+}
+*/
+
+
+/*
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main()
+{
+    char s[] = "This IS tHe WaY.";
+
+    // s[0] = tolower(s[0]);
+
+    // printf("s: %s\n", s);
+
+    int length = strlen(s);
+    for (int i = 0; i < length; i++)
+    {
+        printf("%c ", s[i]);
+        if (isupper(s[i]))
+            printf("upper\n");
+        else if (islower(s[i]))
+            printf("lower\n");
+        else printf("\n");
+
+    }
+}
+*/
+
+
+
+
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main()
+{
+    char s[] = "This IS tHe WaY.";
+
+    printf("s: %s\n", s);
+
+    int length = strlen(s);
+    for (int i = 0; i < length; i++)
+    {
+        if (isupper(s[i]))
+            s[i] = tolower(s[i]);
+        else if (islower(s[i]))
+            s[i] = toupper(s[i]);
+    }
+    printf("s: %s\n", s);
 }
