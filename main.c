@@ -583,7 +583,7 @@ int main()
 
 
 
-
+/*
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -603,4 +603,20 @@ int main()
             s[i] = toupper(s[i]);
     }
     printf("s: %s\n", s);
+}
+*/
+
+
+
+#include <stdio.h>
+
+int find_max(int a, int b)
+{
+    if (a > b) return a;
+    else return b;
+}
+
+int main()
+{
+   
 }
