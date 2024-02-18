@@ -618,5 +618,6 @@ int find_max(int a, int b)
 
 int main()
 {
-   
+   int max = find_max(10, 5);
+   printf("max: %d\n", max);
 }
