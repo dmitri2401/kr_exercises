@@ -611,13 +611,15 @@ int main()
 #include <stdio.h>
 
 int find_max(int a, int b)
-{
-    if (a > b) return a;
-    else return b;
-}
 
 int main()
 {
-   int max = find_max(10, 5);
-   printf("max: %d\n", max);
+   int result = find_max(10, 12) + 10;
+   printf("result: %d\n", result);
+}
+
+int find_max(int a, int b)
+{
+    if (a > b) return a;
+    else return b;
 }
