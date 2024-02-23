@@ -645,7 +645,7 @@ float triple(float n)
 */
 
 
-
+/*
 #include <stdio.h>
 
 double add(double x, double y);
@@ -668,4 +668,91 @@ double power(double x, int n)
         result = mult(result, x);
     }
     return result;
+}
+*/
+
+
+/*
+#include <stdio.h>
+
+void print_two(float a, float b);
+
+int main()
+{
+    float x = 2.5, y = 4.2;
+    print_two(x, y);
+}
+
+void print_two(float a, float b)
+{
+    printf("%f\n%f\n", a, b);
+}
+*/
+
+
+/*
+#include <stdio.h>
+
+void add_one(int array[], int length);
+
+int main()
+{
+    int a[] = {2,4,9,1,3,5};
+    int x = 5;
+
+    add_one(a, x);
+
+    printf("a: %p\n", a);
+
+    add_one(a, 6);
+    for (int i = 0; i < 6; i++)
+        printf("a[%d]=%d\n", i, a[i]);
+}
+
+void add_one(int array[], int length)
+{
+    printf("array: %p\n", array);
+    for (int i = 0; i < length; i++) array[i] += 1;
+}
+*/
+
+
+
+/*
+#include<stdio.h>
+
+int main()
+{
+    int a = 5;
+    int b = 10;
+    int *p;
+    p = &b;
+    printf("p: %p\n", p);
+    printf("&b: %p\n", &b);
+    printf("&a: %p\n", &a);
+    p = &a;
+    printf("p: %p\n", p);
+    *p = *p + 1;
+    printf("a: %d\n", a);
+}
+*/
+
+
+
+#include <stdio.h>
+
+void add_one(int *a);
+
+int main()
+{
+    int b = 5;
+    printf("&b: %p\n", &b);
+    add_one(&b);
+    printf("b: %d\n", b);
+}
+
+void add_one(int *a)
+{
+    printf("a: %p\n", a);
+    *a = *a + 1;
 }
