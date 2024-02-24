@@ -738,7 +738,7 @@ int main()
 */
 
 
-
+/*
 #include <stdio.h>
 
 void add_one(int *a);
@@ -755,4 +755,46 @@ void add_one(int *a)
 {
     printf("a: %p\n", a);
     *a = *a + 1;
+}
+*/
+
+
+/*
+#include <stdio.h>
+
+void add_one(int *a, int *b, int *c);
+
+int main()
+{
+    int x1 = 1, x2 = 2, x3 = 3;
+    add_one(&x1, &x2, &x3);
+    printf("x1: %d\n", x1);
+    printf("x2: %d\n", x2);
+    printf("x3: %d\n", x3);
+}
+
+void add_one(int *a, int *b, int *c)
+{
+    *a = *a + 1;
+    *b = *b + 1;
+    *c = *c + 1;
+}
+*/
+
+
+
+#include <stdio.h>
+
+void add_one(int array[], int length);
+
+int main()
+{
+    int [a] = {1,2,3};
+    add_one(a, 3);
+}
+
+void add_one(int array[], int length)
+{
+    for (int i - 0, i < length, i++)
+        array[i] += 1;
 }
