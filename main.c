@@ -797,6 +797,6 @@ int main()
 
 void add_one(int array[], int length)
 {
-    for (int i = 0, i < length, i++)
+    for (int i = 0; i < length; i++)
         array[i] += 1;
 }
