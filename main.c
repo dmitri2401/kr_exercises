@@ -804,7 +804,7 @@ void add_one(int array[], int length)
 
 
 
-
+/*
 #include <stdio.h>
 
 void add_one(int *array, int length);
@@ -812,9 +812,44 @@ void add_one(int *array, int length);
 int main()
 {
     int a[] = {1,2,3};
-    add_one(a, 3);
-    for (int i = 0; i < 3; i++)
-    printf("a[%d]=%d\n", i, a[i]);
+    int *p;
+    p = a;
+    
+    printf("p: %p\n", p);
+    printf("a: %p\n", a);
+
+    printf("p[2] = %d\n", p[2]);
+    printf("a[2] = %d\n", a[2]);
+
+    printf("*(p + 1) = %d\n", *(p + 1));
+    printf("*(p + 2) = %d\n", *(p + 2));
+
+    printf("*(a + 1) = %d\n", *(a + 1));
+    printf("*(a + 2) = %d\n", *(a + 2));
+}
+
+void add_one(int *array, int length)
+{
+    for (int i = 0; i < length; i++)
+        array[i] += 1;
+}
+*/
+
+
+
+
+#include <stdio.h>
+
+void add_one(int *array, int length);
+
+int main()
+{
+    int a[] = {1,2,3,4,5,6,7,8,9,10};
+    add_one(a + 5, 5);
+    for (int i = 0; i < 10; i++)
+        printf("a[%d] = %d\n", i, a[i]);
+    
+    
 }
 
 void add_one(int *array, int length)
