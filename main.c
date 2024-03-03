@@ -860,7 +860,7 @@ void add_one(int *array, int length)
 */
 
 
-
+/*
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -877,5 +877,65 @@ int main()
     for (int i = 0; i < 5; i++)
         printf("a[%d] = %d\n", i, a[i]);
 
+}
+*/
 
+
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int *a;
+    
+    a = calloc( 5, sizeof(int) );
+    a[0] = 1;
+    a[1] = 5;
+    a[2] = 7;
+    a[3] = 9;
+    a[4] = 11;
+    for (int i = 0; i < 5; i++)
+        printf("a[%d] = %d\n", i, a[i]);
+
+    free(a);
+}
+*/
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int *numbers;
+    int size = 2;
+    numbers = malloc( sizeof(int) * size );
+    int input = 0, i = 0;
+    do
+    {
+        if (i == size)
+        {
+            size += 2;
+            numbers = realloc(numbers, sizeof(int)*size);
+        }
+        printf("Enter (-1 to q): ");
+        scanf("%d", &input);
+        if (input != -1)
+        {
+            numbers[i] = input;
+            i++;
+        }
+    } while (input != -1);
+    
+    int num_elements = i;
+    int total = 0;
+    for (int j = 0; j < num_elements; j++)
+        total += numbers[j];
+
+    printf("average: %d\n", total / num_elements);
+
+    free(numbers);
 }
