@@ -904,7 +904,7 @@ int main()
 */
 
 
-
+/*
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -920,6 +920,7 @@ int main()
         {
             size += 2;
             numbers = realloc(numbers, sizeof(int)*size);
+            printf("Realloc for %d ints\n", size);
         }
         printf("Enter (-1 to q): ");
         scanf("%d", &input);
@@ -938,4 +939,109 @@ int main()
     printf("average: %d\n", total / num_elements);
 
     free(numbers);
+}
+*/
+
+
+/*
+#include <stdio.h>
+
+typedef int inches;
+
+int main()
+{
+    inches person1 = 181;
+    inches person2 = 179;
+
+    printf("person1: %d\n", person1);
+    printf("person2: %d\n", person2);
+
+}
+*/
+
+
+
+/*
+#include <stdio.h>
+
+struct Point
+{
+    int x;
+    int y;
+};
+
+int main()
+{
+    struct Point p1;
+    p1.x = 5;
+    p1.y = 3;
+    printf("(%d, %d)\n", p1.x, p1.y);
+
+    struct Point p2;
+    p2.x = 10;
+    p2.y = 4;
+    printf("(%d, %d)\n", p2.x, p2.y);
+
+    struct Point p3 = {1,2};
+    printf("(%d, %d)\n", p3.x, p3.y);
+
+    struct Point p4 = 
+    {.y = 7,
+     .x = 6
+    };
+    printf("(%d, %d)\n", p4.x, p4.y);
+
+}
+*/
+
+
+/*
+#include <stdio.h>
+
+typedef struct
+{
+    int x;
+    int y;
+} Point;
+
+int main()
+{
+    Point p1 = {.x = 6, .y = 9};
+    printf("(%d, %d)\n", p1.x, p1.y);
+}
+*/
+
+
+
+
+#include <stdio.h>
+#include <string.h>
+
+typedef struct
+{
+    char first_name[50];
+    char last_name[50];
+    int age;
+} Student;
+
+void print_student(Student s);
+
+int main()
+{
+    Student s1;
+    s1.age = 20;
+    strcpy(s1.first_name, "Devon");
+    strcpy(s1.last_name, "Smith");
+    
+    print_student(s1);
+    printf("\nAge: %d\n", s1.age);
+
+}
+
+void print_student(Student s)
+{
+    printf("%s %s\n", s.first_name,
+                      s.last_name);
+    printf("Age: %d\n", s.age);
+    s.age = 25;
 }
