@@ -1013,7 +1013,7 @@ int main()
 
 
 
-
+/*
 #include <stdio.h>
 #include <string.h>
 
@@ -1045,3 +1045,62 @@ void print_student(Student s)
     printf("Age: %d\n", s.age);
     s.age = 25;
 }
+*/
+
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct
+{
+    char first_name[50];
+    char last_name[50];
+    int age;
+} Student;
+
+void print_student(Student s);
+void age_student(Student *s);
+
+int main()
+{
+    Student *s1;
+
+    s1 = calloc(1, sizeof(Student));
+    s1->age = 20;
+    printf("Age: %d\n", s1->age);
+    age_student(s1);
+    printf("Age: %d\n", s1->age);
+
+    free(s1);
+
+}
+
+void age_student(Student *s)
+{
+    s->age += 1;
+}
+
+void print_student(Student s)
+{
+    printf("%s %s\n", s.first_name,
+                      s.last_name);
+    printf("Age: %d\n", s.age);
+    s.age = 25;
+}
+*/
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct
+{
+    int data;
+    int *array;
+} Student;
+
+int main()
