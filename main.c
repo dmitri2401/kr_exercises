@@ -1218,7 +1218,7 @@ int main()
 
 
 
-
+/*
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -1256,4 +1256,16 @@ void print_array(int data[ROWS][COLS])
         for (int j = 0; j < COLS; j++)
             printf("data[%d][%d] = %d\n", i, j,
                                         data[i][j]);
+}
+*/
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+
+    return 1;
 }
