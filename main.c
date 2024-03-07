@@ -1092,6 +1092,30 @@ void print_student(Student s)
 */
 
 
+/*
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct
+{
+    int data1;
+    int data2;
+} Info;
+
+int main()
+{
+    Info a;
+    a.data1 = 7;
+    a.data2 = 10;
+    Info b;
+    b = a;
+    printf("b.data1: %d\n", b.data1);
+    printf("b.data2: %d\n", b.data2);
+}
+*/
+
+
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -1099,8 +1123,19 @@ void print_student(Student s)
 
 typedef struct
 {
-    int data;
+    int data1;
     int *array;
-} Student;
+} Info;
 
 int main()
+{
+    Info a;
+    a.data1 = 7;
+    a.array = malloc(sizeof(int) * 5);
+    for (int i = 0; i < 5; i++)
+        a.array[i] = i + 1;
+    Info b = a;
+    printf("b.data1: %d\n", b.data1);
+
+    free(a.array);
+}
