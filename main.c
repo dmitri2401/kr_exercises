@@ -1116,7 +1116,7 @@ int main()
 */
 
 
-
+/*
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -1147,4 +1147,38 @@ int main()
         printf("a.array[%d] = %d\n", i, a.array[i]);
 
     free(a.array);
+}
+*/
+
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+    int data[2][3] = { {1,2,3},
+                       {4,5,6} };
+
+    printf("data[1][1]=%d\n", data[1][1]);
+}
+*/
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+    int data[2][3] = { {1,2,3},
+                       {4,5,6} };
+
+    for (int i = 0; i < 2; i++)
+        for (int j = 0; j < 3; j++)
+            printf("data[%d][%d]=%d\n", i, j,
+                                        data[i][j]);
 }
