@@ -1167,18 +1167,93 @@ int main()
 
 
 
+/*
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define ROWS 3
+#define COLS 3
+
+int main()
+{
+    int data[3][3] = { {1,2,3},
+                       {4,5,6},
+                       {7,8,9} };
+
+    for (int i = 0; i < ROWS; i++)
+        for (int j = 0; j < COLS; j++)
+            printf("data[%d][%d] = %d\n", i, j,
+                                        data[i][j]);
+}
+*/
+
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define ROWS 2
+#define COLS 3
+
+int main()
+{
+    int data[3][3] = { {1,2,3},
+                       {4,5,6} };
+
+    for (int i = 0; i < ROWS; i++)
+        for (int j = 0; j < COLS; j++)
+        {
+            printf("data[%d][%d] = ", i, j);
+            scanf("%d", &data[i][j]);
+        }
+
+    for (int i = 0; i < ROWS; i++)
+        for (int j = 0; j < COLS; j++)
+            printf("data[%d][%d] = %d\n", i, j,
+                                        data[i][j]);
+}
+*/
+
+
+
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
+#define ROWS 2
+#define COLS 3
+
+void print_array(int data[ROWS][COLS]);
+void input_array(int data [ROWS][COLS]);
+
 int main()
 {
-    int data[2][3] = { {1,2,3},
-                       {4,5,6} };
+    int data[ROWS][COLS] = { 0 };
+    
+    input_array(data);
+    print_array(data);
 
-    for (int i = 0; i < 2; i++)
-        for (int j = 0; j < 3; j++)
-            printf("data[%d][%d]=%d\n", i, j,
+}
+
+void input_array(int data [ROWS][COLS])
+{
+
+    for (int i = 0; i < ROWS; i++)
+        for (int j = 0; j < COLS; j++)
+        {
+            printf("data[%d][%d] = ", i, j);
+            scanf("%d", &data[i][j]);
+        }
+
+}
+
+void print_array(int data[ROWS][COLS])
+{
+    for (int i = 0; i < ROWS; i++)
+        for (int j = 0; j < COLS; j++)
+            printf("data[%d][%d] = %d\n", i, j,
                                         data[i][j]);
 }
