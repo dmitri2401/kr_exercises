@@ -1136,6 +1136,15 @@ int main()
         a.array[i] = i + 1;
     Info b = a;
     printf("b.data1: %d\n", b.data1);
+    for (int i = 0; i < 5; i++)
+        printf("b.array[%d] = %d\n", i, b.array[i]);
+
+    printf("a.array: %p\n", a.array);
+    printf("b.array: %p\n", b.array);
+
+    b.array[0] = 10;
+    for (int i = 0; i < 5; i++)
+        printf("a.array[%d] = %d\n", i, a.array[i]);
 
     free(a.array);
 }
