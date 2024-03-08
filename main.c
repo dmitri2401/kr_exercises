@@ -1260,12 +1260,61 @@ void print_array(int data[ROWS][COLS])
 */
 
 
+/*
+// This code doesn't work properly
+
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+    printf("argc: %d\n", argc);
+
+    printf("argv[1]=%s\n", argv[1]);
+
+    for (int i = 0; i < argc; i++)
+        printf("argv[%d]=%s\n", i, argv[i]);
+
+    return 0;
+}
+*/
+
+
+/*
+// This one doesn't woek as expected too
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[])
+{
+    if (argc == 3)
+    {
+    int num_times = atoi(argv[2]);
+
+    for (int i = 0; i < num_times; i++)
+        printf("%s\n", argv[1]);
+}
+else
+{
+    printf("2 arguments expected!\n");
+    printf("1st - string to print out\n");
+    printf("2nd - # of times to print\n");
+    return 1;
+}
+
+}
+*/
+
+
 
 
 #include <stdio.h>
 
-int main()
+int main(int argc, char *argv[])
 {
+int a = 5;
+int b = 2;
 
-    return 1;
+printf("%d / %d = %d\n", a, b, a / b);
+
 }
