@@ -1315,6 +1315,9 @@ int main(int argc, char *argv[])
 int a = 5;
 int b = 2;
 
+double c = a / b;
+
 printf("%d / %d = %d\n", a, b, a / b);
+printf("%d / %d = %d\n", a, b, c);
 
 }
