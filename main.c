@@ -1350,9 +1350,14 @@ int main(int argc, char *argv[])
 
 
 
+/*
+// This one does not work properly
 
 #include <stdio.h>
 #include <stdlib.h>
+
+#define LINE_BUFFER 100
+#define NUM_BUFFER 100
 
 int main(int argc, char *argv[])
 {
@@ -1366,8 +1371,8 @@ int main(int argc, char *argv[])
     }
     else
     {
-        char buffer[100];
-        int data[10];
+        char buffer[LINE_BUFFER];
+        int data[NUM_BUFFER];
         int i = 0;
         while (fgets( buffer, 100, fh_read ) 
                != NULL)
@@ -1379,8 +1384,77 @@ int main(int argc, char *argv[])
         fclose(fh_read);
         int num_lines = i;
 
+        int total = 0;
         for (int j = 0; j < num_lines; j++)
-        printf("data[%d]=%d\n", j, data[j]);
+        {
+            printf("data[%d]=%d\n", j, data[j]);
+            total += data[j];
+        }
+        printf("avg: %d\n",
+               total / num_lines);
     }
+
+}
+*/
+
+
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+#define NAME 5
+
+void func();
+
+int main(int argc, char *argv[])
+{
+    const int x = 5;
+    printf("%d\n", x + 2);
+
+}
+
+void func()
+{
+    printf("%d\n", NAME);
+}
+*/
+
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+int x = 10;
+
+void func();
+
+int main(int argc, char *argv[])
+{
+
+    printf("x: %d\n", x);
+    x++;
+    func();
+
+}
+
+void func()
+{
+    x++;
+    printf("x: %d\n", x);
+}
+*/
+
+
+
+#include <stdio.h>
+
+
+int main(int argc, char *argv[])
+{
+    char buffer[100];
+    printf("Enter: ");
+    fgets(buffer, 100, stdin);
+    printf("Buffer: %s\n", buffer);
 
 }
