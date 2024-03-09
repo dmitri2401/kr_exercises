@@ -1325,7 +1325,7 @@ printf("%d / %d = %f\n", a, b, c);
 
 
 
-
+/*
 #include <stdio.h>
 
 int main(int argc, char *argv[])
@@ -1340,9 +1340,47 @@ int main(int argc, char *argv[])
     }
     else
     {
-        int x = 100;
-        fprintf(fh_write, "Val: %d!\n", x);
+        for (int = 0; i < 10; i++)
+        fprintf(fh_write, "%d\n", (i+1));
         fclose(fh_write);
+    }
+
+}
+*/
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[])
+{
+    FILE *fh_read;
+
+    fh_read = fopen("write.txt", "r");
+    if (fh_read == NULL)
+    {
+        printf("File could not be opened\n");
+        return 1;
+    }
+    else
+    {
+        char buffer[100];
+        int data[10];
+        int i = 0;
+        while (fgets( buffer, 100, fh_read ) 
+               != NULL)
+        {
+            printf("%s", buffer);
+            data[i] = atoi(buffer);
+            i++;
+        }
+        fclose(fh_read);
+        int num_lines = i;
+
+        for (int j = 0; j < num_lines; j++)
+        printf("data[%d]=%d\n", j, data[j]);
     }
 
 }
