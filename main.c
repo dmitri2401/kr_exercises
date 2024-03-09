@@ -1307,7 +1307,7 @@ else
 
 
 
-
+/*
 #include <stdio.h>
 
 int main(int argc, char *argv[])
@@ -1315,9 +1315,34 @@ int main(int argc, char *argv[])
 int a = 5;
 int b = 2;
 
-double c = a / b;
+double c = (double) a / b;
 
 printf("%d / %d = %d\n", a, b, a / b);
-printf("%d / %d = %d\n", a, b, c);
+printf("%d / %d = %f\n", a, b, c);
+
+}
+*/
+
+
+
+
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+    FILE *fh_write;
+
+    fh_write = fopen("write.txt", "w");
+    if (fh_write == NULL)
+    {
+        printf("Error opening file!\n");
+        return 1;
+    }
+    else
+    {
+        int x = 100;
+        fprintf(fh_write, "Val: %d!\n", x);
+        fclose(fh_write);
+    }
 
 }
