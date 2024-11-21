@@ -2,8 +2,8 @@
 
 int main(void)
 {
-    int value = getchar();
-    int res = putchar(value);
-    printf("\n%d\n", res);
+    int value1 = getchar();
+    int value2 = getchar();
+    putchar(value);
     return 0;
 }
