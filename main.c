@@ -2,9 +2,10 @@
 
 int main(void)
 {
-    int value1 = getchar();
-    int value2 = getchar();
-    
-    printf("%c %c\n", value1, value2);
+    int var_i = -1283;
+    double var_d = 54.34675;
+
+    printf("[%#x]\n", var_i);
+    printf("[%+.2f]\n", var_d);
     return 0;
 }
