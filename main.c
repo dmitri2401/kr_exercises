@@ -42,7 +42,9 @@ int main(void)
 }
 */
 
+/*
 
+//scanf
 #include <stdio.h>
 
 int main(void)
@@ -53,5 +55,22 @@ int main(void)
     int res = scanf("%*llu; %u; %lf", &price, &weight);
     
     printf("res = %d: price = %d, weight = %.2f\n", res, price, weight);
+    return 0;
+}
+*/
+
+
+// Arifmetic operations
+
+#include <stdio.h>
+
+int main(void)
+{
+    short a = -5;
+    int b = 10;
+
+    double res_1 = (double)a / (double)b;
+    double res_2 = 7.0 / 2.0;
+
     return 0;
 }
