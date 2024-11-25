@@ -81,8 +81,14 @@ int main(void)
 
 int main(void)
 {
-    int res = 10 % 3;
-    printf("res = %d\n", res);
+    int res = 10 % 4;
+
+    // int res_1 = -10 % 4;    // -2
+    // int res_2 = -10 % -4;   // -2
+    // int res_3 = 10 % -4;    // 2
+    int res_4 = 10 - 10 / 4 * 4;
+
+    printf("res = %d, res_4 = %d\n", res, res_4);
 
     return 0;
 }
