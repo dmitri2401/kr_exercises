@@ -59,7 +59,7 @@ int main(void)
 }
 */
 
-
+/*
 // Arifmetic operations
 
 #include <stdio.h>
@@ -71,6 +71,18 @@ int main(void)
 
     double res_1 = (double)a / (double)b;
     double res_2 = 7.0 / 2.0;
+
+    return 0;
+}
+*/
+
+
+#include <stdio.h>
+
+int main(void)
+{
+    int res = 10 % 3;
+    printf("res = %d\n", res);
 
     return 0;
 }
