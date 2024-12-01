@@ -76,7 +76,7 @@ int main(void)
 }
 */
 
-
+/*
 #include <stdio.h>
 
 int main(void)
@@ -91,4 +91,105 @@ int main(void)
     printf("res = %d, res_4 = %d\n", res, res_4);
 
     return 0;
+}
+*/
+
+/*
+#include <stdio.h>
+
+int main(void)
+{
+    int digit;
+    scanf("%d", &digit);
+
+    int res = digit % 2;
+    printf("res = %d\n", res);
+
+    return 0;
+}
+*/
+
+
+/*
+#include <stdio.h>
+
+int main(void)
+{
+    int digit;
+    scanf("%d", &digit);
+
+    int range = 10;
+    int res = digit % range;
+    printf("res = %d\n", res);
+
+    return 0;
+}
+*/
+
+
+/*
+int main(void) {
+    int a = scanf("%d", &a);
+    int b = scanf("%d", &b);
+    int res = a * b;
+    
+    printf("res = %d\n", res);
+    
+return 0;
+}*/
+
+/*
+#include <stdio.h>
+
+int main(void) {
+    int a, b;
+    int num_read = scanf("%d", &a);
+    if (num_read != 1) {
+        printf("error reading integer a!");
+        return 1; // indicate error
+    }
+
+    num_read = scanf("%d", &b);
+    if (num_read != 1) {
+        printf("error reading integer b!");
+        return 1; // indicate error
+    }
+
+    int res = a * b;
+    
+    printf("res = %d\n", res);
+    
+    return 0;
+}
+*/
+
+
+/*
+#include <stdio.h>
+
+int main(void) {
+    int a, b;
+    scanf("%d", &a);
+    scanf("%d", &b);
+
+    int res = a * b;
+    
+    printf("res = %d\n", res);
+    
+    return 0;
+}
+*/
+
+
+#include <stdio.h>
+
+int main(void) {
+
+int a = 100;
+int* b = &a;
+*b = 200;
+printf("%d", a); // prints 200
+a = 300;
+printf("%d\n", *b); // prints 300
+
 }
